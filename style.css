@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+main {
+  /* border: 2px solid red; */
+  height: 100vh;
+  width: 100vw;
+  background-image: url("bg.jpg");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arena {
+  /* border: 2px solid rgb(0, 0, 0); */
+
+  background: linear-gradient(
+    to right,
+    rgb(94, 146, 94),
+    rgb(201, 211, 10),
+    rgb(49, 133, 48),
+    rgb(100, 95, 3)
+  );
+
+  box-shadow: 0px 0px 10px black;
+  height: 90vmin;
+  width: 100vmin;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(18, 1fr);
+}
+/* #arena::before{
+    content: "";
+    height: 90vmin;
+    width: 100vmin;
+    position: relative;
+    background-color: black;
+    opacity: 0.4;  
+    z-index: 1;
+} */
+
+/*--- Snake characteristics------------------------------------------------------------------------ */
+
+.head {
+  background-color: rgb(175, 6, 6);
+}
+.body {
+    background-color: rgb(104, 4, 118);
+}
+.food {
+  background-color: rgb(35, 4, 173);
+}
+/* --------------------------------------------------------------------------------------------------- */

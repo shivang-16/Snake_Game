@@ -1,20 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <main>
-        <button id="pause">pause</button>
-        <div id="arena">
-            
-        </div>
-        
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="side-bar">
+      <div class="side-bar-header">
+        <h2>The <span class="word">Snake</span> Arena</h2>
+      </div>
+      <div class="side-bar-content">
+        <div class="box1">
+          <button id="pause">Pause Game</button><br>
+
+          Level: <div id="levelCount" class="count"></div><br>
+
+          <div class="food snakeFood"><br>
+          </div>: <div id="foodCount" class="count">
+
+          </div><br>
+          Score: <div id="scoreCount" class="count">
+
+          </div> <br>
+          High Score: <div id="highscoreCount" class="count">
+
+          </div> <br>
+          <button id="reset">Reset High Score</button>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <div id="arena">
+
+    </div>
+    <div class="box2">
+    </div>
+    <div class="popover-background">
+      <div class="popover">
+        <div class="popover-header">
+          <h2>The <span class="word">Snake</span>Arena</h2>
+        </div>
+        <div class="popover-content">
+          <img src="logo.jpg" alt="" />
+          <label for="speedBox">Set Speed</label>
+
+          <input type="number" id="speedBox" value="5">
+          <button id="startGame">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="win-popover-background">
+      <div class="win-popover">
+        <div class="win-popover-content popover-content">
+          <h3 id="winner-message">Game Over</h3>
+          <img src="gameOver.png" />
+          <button id="play-again">Play Again!</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

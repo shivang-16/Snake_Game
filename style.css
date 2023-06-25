@@ -15,6 +15,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* border: 2px solid red; */
 }
 main::before {
   content: "";
@@ -40,8 +41,8 @@ main::before {
 .side-bar {
   /* border: 2px solid red; */
 
-  height: 400px;
-  width: 360px;
+  height: 220px;
+  width: 300px;
   position: absolute;
   top: 0;
   left: 0;
@@ -53,7 +54,6 @@ main::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   border-radius: 8px;
 }
 .side-bar-content {
@@ -61,15 +61,13 @@ main::before {
   font-weight: bold;
   font-size: 18px;
 }
+#reset {
+  margin-top: 2px;
+}
 .word {
   color: rgb(0, 255, 0);
 }
-#speedBox {
-  width: 30px;
-  /* height: 20px; */
-  border-radius: 5px;
-  padding: 2px;
-}
+
 button {
   padding: 2px 5px 2px 5px;
   border: 2px solid rgb(7, 125, 7);
@@ -95,6 +93,11 @@ button:hover {
 #highscoreCount {
   color: red;
 }
+#finalScore {
+  font-weight: bold;
+  margin: 10px;
+  font-size: 18px;
+}
 /*--- Snake characteristics------------------------------------------------------------------------ */
 
 .head {
@@ -106,14 +109,11 @@ button:hover {
   border: 5px solid rgb(4, 99, 18);
   border-radius: 30px;
   background-color: rgb(239, 233, 233);
-  height: 25px;
-  width: 25px;
 }
 .food {
   border: 5px solid rgb(119, 105, 3);
   border-radius: 30px;
   background-color: rgb(218, 193, 6);
-  background-image: url("apple.png");
 }
 
 /* --------------------------------------------------------------------------------------------------- */
@@ -141,7 +141,7 @@ button:hover {
   color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0px 0px 16px rgb(255, 255, 255);
-  height: 350px;
+  height: 360px;
   width: 410px;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 .popover-content {
   height: 100%;
@@ -177,7 +177,7 @@ button:hover {
 .popover-content img {
   height: 170px;
   width: 310px;
-  margin: 10px 0px 0px 0px;
+  margin: 5px 0px 5px 0px;
   color: #7c7d7e;
 }
 .popover-content > button {
@@ -189,12 +189,24 @@ button:hover {
   box-shadow: -0.1px 0.4px 0px 0.5px rgb(213, 213, 213);
   font-size: 15px;
   font-weight: 500;
-  margin-top: 18px;
+  margin-top: 8px;
   cursor: pointer;
   color: white;
 }
 .popover-content > button:hover {
   background-color: rgb(53, 209, 5);
+}
+#msg {
+  color: red;
+}
+label {
+  font-weight: bold;
+}
+#speedBox {
+  width: 30px;
+  margin-top: 2px;
+  border-radius: 5px;
+  padding: 2px;
 }
 
 .win-popover-background {
@@ -250,4 +262,65 @@ button:hover {
 .win-popover-content img {
   height: 100px;
   width: 100px;
+}
+
+/* controls */
+.controls {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 180px;
+  width: 200px;
+  margin: 0px 20px;
+}
+.control-button {
+  height: 78px;
+  width: 78px;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  #arena {
+    position: absolute;
+    left: 0;
+    margin: 10px 0px 10px 10px;
+    height: 80vmin;
+    width: 94vmin;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popover {
+    height: 350px;
+    width: 320px;
+  }
+  .popover-header {
+    font-size: 12px;
+  }
+  .win-popover {
+    height: 300px;
+    width: 320px;
+  }
+  #arena {
+    position: absolute;
+    margin: 10px 0px 10px 10px;
+    height: 85vmin;
+    width: 94vmin;
+    top: 28%;
+  }
+  .head {
+    border: 1px solid rgb(114, 2, 2);
+    border-radius: 40px;
+  }
+  .body {
+    border: 1px solid rgb(4, 99, 18);
+    border-radius: 40px;
+  }
+  .food {
+    border: 1px solid rgb(119, 105, 3);
+    border-radius: 40px;
+  }
+  #msg{
+    display: none;
+  }
 }

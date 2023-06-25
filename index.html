@@ -12,13 +12,11 @@
   <main>
     <div class="side-bar">
       <div class="side-bar-header">
-        <h2>The <span class="word">Snake</span> Arena</h2>
+        <h2>The <span class="word">Snake</span> Game</h2>
       </div>
       <div class="side-bar-content">
         <div class="box1">
-          <button id="pause">Pause Game</button><br>
 
-          Level: <div id="levelCount" class="count"></div><br>
 
           <div class="food snakeFood"><br>
           </div>: <div id="foodCount" class="count">
@@ -44,13 +42,15 @@
     <div class="popover-background">
       <div class="popover">
         <div class="popover-header">
-          <h2>The <span class="word">Snake</span>Arena</h2>
+          <h2>The <span class="word">Snake</span> Game</h2>
         </div>
+
         <div class="popover-content">
+          <span id="msg">Use Arrow keys on keyboard to move snake!</span>
           <img src="logo.jpg" alt="" />
           <label for="speedBox">Set Speed</label>
 
-          <input type="number" id="speedBox" value="5">
+          <input type="number" id="speedBox" value="8">
           <button id="startGame">Start Game</button>
         </div>
       </div>
@@ -61,9 +61,17 @@
         <div class="win-popover-content popover-content">
           <h3 id="winner-message">Game Over</h3>
           <img src="gameOver.png" />
+          <div id="finalScore"></div>
           <button id="play-again">Play Again!</button>
         </div>
       </div>
+    </div>
+
+    <div class="controls">
+      <button id="up" class="control-button">up</button>
+      <button id="right" class="control-button">right</button>
+      <button id="left" class="control-button">left</button>
+      <button id="down" class="control-button">down</button>
     </div>
   </main>
   <script src="script.js"></script>
